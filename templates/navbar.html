@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>CodePen - Responsive Dropdown Navigation Bar</title>
+
+  </head>
+
+  <body>
+    <!-- partial:index.partial.html -->
+    <!-- 
+Following Tania Ruscia's tutorial on creating your own responsive dropdown navigation bar. https://www.taniarascia.com/responsive-dropdown-navigation-bar/
+-->
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="#!">Flight Price Prediction</a>
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
+          </div>
+          <ul class="nav-list">
+            <!-- Setting the links to #! will ensure that no action takes place on click. -->
+            <li><a href="#!">Home</a></li>
+            <li><a href="#!">About</a></li>
+            <li><a href="#!">Services</a>
+              <!-- <ul class="nav-dropdown">
+                <li><a href="#!">First Class</a></li>
+                <li><a href="#!">Business Class</a></li>
+                <li><a href="#!">Premium Economy</a></li>
+                <li><a href="#!">Economy</a></li>
+              </ul> -->
+            </li>
+            <li><a href="#!">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="/static/js/navbar.js"></script>
+
+  </body>
+
+</html>

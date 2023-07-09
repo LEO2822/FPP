@@ -1,0 +1,59 @@
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Merriweather', sans-serif;
+}
+
+html, body {
+  background: #f19999;
+  font-family: 'Merriweather', sans-serif;
+}
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.facilities-col img{
+    width: 50%;
+    border-radius: 10px;
+}
+
+.facilities-col p{
+    padding: 0;
+}
+
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    margin-left: 4%; 
+    padding-left: 20px;
+    width: 24.99999%;
+  }
+  
+  .abc
+  {
+    padding: 0 6px;
+    float: right; 
+    margin-right: 16%;
+    width: 24.99999%;
+  }

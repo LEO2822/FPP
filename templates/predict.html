@@ -1,0 +1,210 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flight Price Prediction</title>
+
+
+        <!-- BootStrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/css/navbar.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="shortcut icon" href="/static/images/icons8-airplane-64.png">
+
+        <!-- css -->
+        <link rel="stylesheet" href="static/css/predict.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+          </style>
+
+    </head>
+
+    <body>
+
+        <!-- As a heading -->
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="#!" style="text-decoration: none;">Flight Price Prediction</a>
+                </div>
+                <nav>
+                    <div class="nav-mobile">
+                        <a id="nav-toggle" href="#!"><span></span></a>
+                    </div>
+                    <ul class="nav-list">
+                        <!-- Setting the links to #! will ensure that no action takes place on click. -->
+                        <li><a href="/" id="td">Home</a></li>
+                        <li><a href="/predict" id="td">Price Prediction</a></li>
+                        <li><a href="/service" id="td">Services</a></li>
+                        <li><a href="#!" id="td">Booking</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="https://www.makemytrip.com/flights/" id="td">MakeMyTrip</a></li>
+                                <li><a href="https://www.goibibo.com/flights/" id="td">Goibibo</a></li>
+                                <li><a href="https://www.cleartrip.com/flights/" id="td">Cleartrip</a></li>
+                                <li><a href="https://www.flipkart.com/travel/flights" id="td">Flipkart</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/contact" id="td">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- partial -->
+
+        <br><br><br>
+
+
+        <div class="container">
+
+
+
+            <form action="\predict" method="post">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Arrival Date</h5>
+                                <!-- Arrival -->
+                                <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Departure Date</h5>
+                                <!-- Departure -->
+                                <input type="datetime-local" name="Dep_Time" id="Dep_Time" required="required">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- Source -->
+                                <h5 class="card-title">Source</h5>
+                                <select name="Source" id="Source" required="required">
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Cochin">Cochin</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Destination</h5>
+                                <!-- Destination -->
+                                <select name="Destination" id="Destination" required="required">
+                                    <option value="Cochin">Cochin</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="New Delhi">Mumbai</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <br>
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Stopage</h5>
+                                <!-- Total Stops -->
+                                <select name="stops" required="required">
+                                    <option value="0">Non-Stop</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Which Airline you want to travel?</h5>
+                                <!-- Airline -->
+                                <select name="airline" id="airline" required="required">
+                                    <option value="Jet Airways">Jet Airways</option>
+                                    <option value="IndiGo">IndiGo</option>
+                                    <option value="Air India">Air India</option>
+                                    <option value="Multiple carriers">Multiple carriers</option>
+                                    <option value="SpiceJet">SpiceJet</option>
+                                    <option value="Vistara">Vistara</option>
+                                    <option value="Air Asia">Air Asia</option>
+                                    <option value="GoAir">GoAir</option>
+                                    <option value="Multiple carriers Premium economy">Multiple carriers Premium economy
+                                    </option>
+                                    <option value="Jet Airways Business">Jet Airways Business</option>
+                                    <option value="Vistara Premium economy">Vistara Premium economy</option>
+                                    <option value="Trujet">Trujet</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <br>
+                <br>
+                <br>
+                <!-- Submit -->
+                <input type="submit" value="Predict" class="btn btn-secondary">
+            </form>
+
+            <br>
+            <br>
+            <h3>{{ prediction_text }}</h3>
+
+            <br>
+            <br>
+            <!-- <p id="bl">Made with ❣️ <span id="name">Mangesh Kashid</span> & <span id="name">Sauradh Mahanlankar</span> </p> -->
+
+        </div>
+
+        
+
+
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+        </script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+        <script src="/static/js/navbar.js"></script>
+
+    </body>
+
+</html>
